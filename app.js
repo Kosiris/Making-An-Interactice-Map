@@ -10,11 +10,9 @@ const myMap = {
 		center: this.coordinates,
 		zoom: 11,
 		});
-		const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		attribution:
-			'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-		minZoom: '15',
-		}).addTo(this.map)
+		const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 		const marker = L.marker(this.coordinates)
 		marker
 		.addTo(this.map)
@@ -80,3 +78,4 @@ document.getElementById('submit').addEventListener('click', async (event) => {
 	let business = document.getElementById('business').value
 	console.log(business)
 })
+
